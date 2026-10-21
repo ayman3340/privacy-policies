@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - سياسة الخصوصية | I'm up! (أنا مستيقظ)</title>
+    <meta name="description" content="Official Privacy Policy for I'm up! Android App - Zero Cloud, 100% Offline-First, No Ads, GDPR and COPPA compliant.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --bg-secondary: #0f172a;
+            --card-bg: rgba(19, 28, 46, 0.85);
+            --text-color: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent-cyan: #38bdf8;
+            --accent-indigo: #818cf8;
+            --accent-gradient: linear-gradient(135deg, #38bdf8, #818cf8);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-highlight: rgba(56, 189, 248, 0.3);
+            --badge-bg: rgba(56, 189, 248, 0.12);
+            --success-color: #34d399;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.75;
+            padding: 24px 16px;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.07) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(129, 140, 248, 0.07) 0%, transparent 40%);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Top Nav */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 8px 16px;
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid var(--border-highlight);
+            border-radius: 9999px;
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(56, 189, 248, 0.18);
+            transform: translateY(-1px);
+        }
+
+        .action-btns {
+            display: flex;
+            gap: 8px;
+        }
+
+        .util-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px 14px;
+            border-radius: 9999px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .util-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 44px 24px;
+            background: var(--card-bg);
+            backdrop-filter: blur(14px);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent-gradient);
+        }
+
+        .logo-badge {
+            display: inline-block;
+            background: var(--accent-gradient);
+            color: #0b0f19;
+            font-weight: 800;
+            font-size: 13px;
+            padding: 6px 18px;
+            border-radius: 9999px;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .lang-switch-box {
+            display: inline-flex;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 5px;
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            gap: 6px;
+        }
+
+        .lang-tab {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 8px 18px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-tab.active {
+            background: var(--accent-cyan);
+            color: #0b0f19;
+            box-shadow: 0 2px 10px rgba(56, 189, 248, 0.3);
+        }
+
+        .lang-tab:hover:not(.active) {
+            color: var(--text-color);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Content Cards */
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 30px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            transition: border-color 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: rgba(56, 189, 248, 0.25);
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: var(--text-color);
+        }
+
+        ul {
+            margin-right: 24px;
+            margin-bottom: 14px;
+        }
+
+        [dir="ltr"] ul {
+            margin-right: 0;
+            margin-left: 24px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: var(--text-muted);
+        }
+
+        li strong {
+            color: var(--text-color);
+        }
+
+        .permission-badge {
+            background: var(--badge-bg);
+            color: var(--accent-cyan);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .divider {
+            border: 0;
+            border-top: 1px dashed var(--border-color);
+            margin: 40px 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 36px 20px;
+            color: var(--text-muted);
+            font-size: 13px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 24px; }
+            .card { padding: 22px 18px; }
+            .lang-tab { padding: 6px 12px; font-size: 13px; }
+            .top-nav { flex-direction: column; align-items: stretch; }
+        }
+
+        @media print {
+            body { background: #ffffff; color: #000000; }
+            .card, .header { background: #ffffff; color: #000000; border: 1px solid #ccc; box-shadow: none; }
+            .top-nav, .lang-switch-box { display: none; }
+            h1, h2 { color: #000000; -webkit-text-fill-color: #000; }
+            .permission-badge { background: #eee; color: #000; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="top-nav">
+            <a href="index.html" class="back-link">
+                <span>← العودة إلى بوابة سياسات الخصوصية | All Policies Hub</span>
+            </a>
+            <div class="action-btns">
+                <button onclick="window.print()" class="util-btn">🖨️ طباعة / Print PDF</button>
+                <button onclick="navigator.clipboard.writeText(window.location.href); alert('تم نسخ رابط السياسة بنجاح!');" class="util-btn">📋 نسخ الرابط / Copy Link</button>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <header class="header">
+            <span class="logo-badge">AKM LIQUID LABS</span>
+            <h1>I'm up! (أنا مستيقظ) - سياسة الخصوصية</h1>
+            <p class="subtitle">
+                تاريخ السريان: 21 أكتوبر 2026 | Last Updated: October 21, 2026<br>
+                معرف الحزمة / Package ID: <code style="color: var(--accent-cyan);">com.akmliquidlabs.imup</code>
+            </p>
+            
+            <div class="lang-switch-box">
+                <button id="btn-ar" class="lang-tab active" onclick="switchLanguage('ar')">العربية (Arabic)</button>
+                <button id="btn-en" class="lang-tab" onclick="switchLanguage('en')">English (الإنجليزية)</button>
+                <button id="btn-both" class="lang-tab" onclick="switchLanguage('both')">عرض اللغتين (Both)</button>
+            </div>
+        </header>
+
+        <!-- القسم العربي (Arabic Section) -->
+        <div id="section-ar">
+            <div class="card">
+                <h2>1. نظرة عامة ومبدأ الخصوصية المطلقة (Zero-Cloud Privacy)</h2>
+                <p>
+                    نحن في <strong>AKM Liquid Labs</strong> نؤمن بأن نومك واستيقاظك أمر شخصي وخاص تماماً. تم تصميم وتطوير تطبيق <strong>I'm up! (أنا مستيقظ)</strong> بالكامل وفق مبدأ <strong>"انعدام السحابة (Zero-Cloud)"</strong> والعمل دون اتصال بالإنترنت (Offline-First).
+                </p>
+                <p>
+                    <strong>التطبيق لا يجمع، ولا ينقل، ولا يشارك أي بيانات شخصية، أو سجلات استيقاظ، أو تفضيلات نوم مع أي جهة خارجية أو خوادم سحابية على الإطلاق.</strong> جميع بيانات المنبهات والتوكيدات والنسخ الاحتياطية تُخزّن حصرياً وبشكل مشفّر محلياً على جهاز هاتفك فقط.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>2. البيانات والمعلومات المعالجة محلياً</h2>
+                <ul>
+                    <li><strong>بيانات المنبهات وجداول الاستيقاظ:</strong> تُخزّن محلياً عبر قاعدة بيانات SQLite مشفرة (Room Database) ولا تغادر هاتفك.</li>
+                    <li><strong>المستشعرات وحساسية الحركة:</strong> يُستخدم مقياس التسارع والجيروسكوب محلياً للكشف عن التقاط الهاتف أو اهتزازه لإيقاف المنبه، ولا يتم تسجيل أو مشاركة قراءات الحركة.</li>
+                    <li><strong>المايكروفون (اختياري):</strong> يُستخدم مؤقتاً لقياس شدة الضوضاء المحيطة (Ambient Noise) لضبط مستوى صوت التنبيه التدريجي تلقائياً في الغرفة. لا يتم تسجيل أي صوت إطلاقاً ولا حفظ أي مقاطع صوتية.</li>
+                    <li><strong>التوكيدات الصباحية وقراءات القرآن:</strong> تُحفظ محلياً على هاتفك فقط لتسجيل تقدمك الصباحي.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>3. تصاريح النظام المطلوبة والغرض التقني منها</h2>
+                <p>يطلب تطبيق <strong>I'm up!</strong> الحد الأدنى الضروري من أذونات أندرويد لضمان موثوقية الرنين بنسبة 100%:</p>
+                <ul>
+                    <li><span class="permission-badge">SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM</span>: لجدولة توقيت المنبه بدقة متناهية بالثانية حتى في وضع توفير الطاقة العميق (Doze Mode).</li>
+                    <li><span class="permission-badge">USE_FULL_SCREEN_INTENT</span>: لإظهار شاشة التنبيه المرئية فوراً فوق شاشة القفل عندما يرن المنبه أثناء نوم المستخدم.</li>
+                    <li><span class="permission-badge">FOREGROUND_SERVICE_MEDIA_PLAYBACK</span>: لضمان استمرار تشغيل نغمات الطبيعة وأصوات الفجر دون أن يوقفها نظام أندرويد في الخلفية.</li>
+                    <li><span class="permission-badge">POST_NOTIFICATIONS</span>: لعرض إشعارات التنبيه القادم وأزرار إيقاف أو تأجيل المنبه السريعة.</li>
+                    <li><span class="permission-badge">WAKE_LOCK</span>: لإضاءة الشاشة وتنبيه المعالج لحظة إطلاق المنبه في الصباح.</li>
+                    <li><span class="permission-badge">REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</span>: لضمان استثناء تطبيق المنبه من آليات قتل التطبيقات العنيفة التي تتبعها بعض الشركات المصنعة للهواتف.</li>
+                    <li><span class="permission-badge">SYSTEM_ALERT_WINDOW & ACCESSIBILITY_SERVICE</span> *(اختياري)*: يُستخدم فقط عند تفعيل ميزة "درع التركيز الصباحي" لمنع فتح تطبيقات التواصل الاجتماعي المشتتة خلال أول 15-30 دقيقة بعد الاستيقاظ. لا يُستخدم لجمع أي نصوص أو معلومات شخصية.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>4. خدمات الأطراف الثالثة والإعلانات</h2>
+                <p>
+                    <strong>التطبيق خالٍ تماماً من الإعلانات ومن حزم التتبع:</strong>
+                </p>
+                <ul>
+                    <li>لا يحتوي التطبيق على أي إعلانات (No Google AdMob أو شبكات إعلانية).</li>
+                    <li>لا يحتوي التطبيق على حزم تحليلات خارجية مثل Facebook SDK أو Firebase Analytics أو AppsFlyer.</li>
+                    <li>لا يتم بيع أو تداول أو تأجير أي بيانات لأي طرف ثالث.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>5. خصوصية الأطفال (COPPA & GDPR)</h2>
+                <p>
+                    تطبيق <strong>I'm up!</strong> آمن لجميع الأعمار والفئات. وبما أن التطبيق لا يجمع أي معلومات شخصية من أي مستخدم، فإنه لا يجمع عن علم أي بيانات من الأطفال دون سن 13 عاماً.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>6. حذف البيانات والتحكم الكامل</h2>
+                <p>
+                    أنت المالك الوحيد لبياناتك. بمجرد إلغاء تثبيت التطبيق من جهازك أو مسح بيانات التخزين من إعدادات الهاتف، يتم مسح 100% من بيانات المنبهات والإعدادات نهائياً من الذاكرة دون بقاء أي أثر في أي مكان.
+                </p>
+            </div>
+        </div>
+
+        <hr id="lang-divider" class="divider" style="display: none;">
+
+        <!-- English Section -->
+        <div id="section-en" dir="ltr" style="display: none;">
+            <div class="card">
+                <h2>1. Overview & Zero-Cloud Privacy Guarantee</h2>
+                <p>
+                    At <strong>AKM Liquid Labs</strong>, we respect your morning routine and sleep privacy. <strong>I'm up!</strong> is built with an uncompromising <strong>Zero-Cloud, Offline-First</strong> architecture.
+                </p>
+                <p>
+                    <strong>The application does not collect, transmit, store, or share any personal identifiable data, alarm schedules, or sleep habits with any remote servers or third-party entities.</strong> All data resides exclusively on your local device in encrypted storage.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>2. Locally Processed Information</h2>
+                <ul>
+                    <li><strong>Alarm Data:</strong> Saved strictly on-device in a local Room database.</li>
+                    <li><strong>Sensors & Motion:</strong> Hardware accelerometer/gyroscope sensors are evaluated in real-time on-device for shake-to-dismiss and tilt effects. Sensor readings are never stored or transmitted.</li>
+                    <li><strong>Microphone (Optional):</strong> Used transiently to calculate ambient room decibels to adaptively adjust initial alarm ramp volume. Zero audio recordings are captured, stored, or streamed.</li>
+                    <li><strong>Focus & Affirmation Logs:</strong> Kept 100% private in local storage.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>3. Android Permissions & Technical Justifications</h2>
+                <p><strong>I'm up!</strong> requests only the minimal set of Android permissions strictly required for alarm reliability:</p>
+                <ul>
+                    <li><span class="permission-badge">SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM</span>: Required to schedule alarm triggers with millisecond precision during system Doze state.</li>
+                    <li><span class="permission-badge">USE_FULL_SCREEN_INTENT</span>: Required to present the incoming wake-up screen over the keyguard when the device is locked.</li>
+                    <li><span class="permission-badge">FOREGROUND_SERVICE_MEDIA_PLAYBACK</span>: Ensures critical alarm acoustic playback is not killed prematurely by the operating system.</li>
+                    <li><span class="permission-badge">POST_NOTIFICATIONS</span>: Displays proactive upcoming alarm notices and quick-dismiss controls.</li>
+                    <li><span class="permission-badge">WAKE_LOCK</span>: Awakens CPU and turns on display brightness at the scheduled alarm time.</li>
+                    <li><span class="permission-badge">REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</span>: Protects vital alarms from vendor-specific aggressive power saving terminating background services.</li>
+                    <li><span class="permission-badge">SYSTEM_ALERT_WINDOW & ACCESSIBILITY</span>: Optional focus shield preventing morning distraction loops during post-wake recovery. Never logs keystrokes or screen content.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>4. Third-Party Services & Advertising</h2>
+                <ul>
+                    <li><strong>No Ads:</strong> The app is 100% ad-free.</li>
+                    <li><strong>No Third-Party Trackers:</strong> Zero integration with tracking SDKs (No Facebook SDK, No Firebase Analytics, No AppsFlyer).</li>
+                    <li><strong>No Data Brokering:</strong> We never sell, monetize, or transmit user information.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>5. Children's Privacy (COPPA & GDPR-K)</h2>
+                <p>
+                    Because <strong>I'm up!</strong> collects no personal information whatsoever, it complies fully with COPPA and GDPR regulations regarding minors under the age of 13.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>6. Data Retention & Deletion</h2>
+                <p>
+                    Uninstalling the application or selecting "Clear Storage" in Android Settings instantly and permanently deletes all application databases and preferences.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>7. Contact Information</h2>
+                <p>
+                    If you have questions regarding this Privacy Policy, you can reach out directly:
+                    <br>
+                    <strong>Developer:</strong> AKM Liquid Labs
+                    <br>
+                    <strong>Package ID:</strong> com.akmliquidlabs.imup
+                    <br>
+                    <strong>GitHub Issues:</strong> <a href="https://github.com/ayman3340/privacy-policies/issues" style="color: var(--accent-cyan);">github.com/ayman3340/privacy-policies/issues</a>
+                </p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>© 2026 AKM Liquid Labs. All rights reserved.</p>
+            <p>I'm up! (أنا مستيقظ) - Smart Circadian Adaptive Alarm</p>
+            <p><a href="index.html">بوابة سياسات الخصوصية | All Policies Hub</a></p>
+        </footer>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            const secAr = document.getElementById('section-ar');
+            const secEn = document.getElementById('section-en');
+            const divider = document.getElementById('lang-divider');
+            const btnAr = document.getElementById('btn-ar');
+            const btnEn = document.getElementById('btn-en');
+            const btnBoth = document.getElementById('btn-both');
+            const htmlRoot = document.getElementById('html-root');
+
+            btnAr.classList.remove('active');
+            btnEn.classList.remove('active');
+            btnBoth.classList.remove('active');
+
+            if (lang === 'ar') {
+                secAr.style.display = 'block';
+                secEn.style.display = 'none';
+                divider.style.display = 'none';
+                btnAr.classList.add('active');
+                htmlRoot.setAttribute('dir', 'rtl');
+                htmlRoot.setAttribute('lang', 'ar');
+            } else if (lang === 'en') {
+                secAr.style.display = 'none';
+                secEn.style.display = 'block';
+                divider.style.display = 'none';
+                btnEn.classList.add('active');
+                htmlRoot.setAttribute('dir', 'ltr');
+                htmlRoot.setAttribute('lang', 'en');
+            } else {
+                secAr.style.display = 'block';
+                secEn.style.display = 'block';
+                divider.style.display = 'block';
+                btnBoth.classList.add('active');
+                htmlRoot.setAttribute('dir', 'rtl');
+            }
+        }
+    </script>
+</body>
+</html>
